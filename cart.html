@@ -194,25 +194,29 @@
                 </div>
                 
                 <!-- Modal -->
-                <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal fade modal-checkout" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel">Proses Checkout</h4>
+                                <h2 class="modal-title" id="myModalLabel">Proses Checkout</h2>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body checkout-content">
                                 <h3>Data Informasi Anda</h3>
                                 <form class="lamlam-form-1">
-                                    <label>
-                                        <input type="checkbox" id="checkbox">
-                                        <span class="cr"><i class="cr-icon fa fa-circle"></i></span>
-                                        Checkout sebagai tamu
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" id="checkbox">
-                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                                        Checkout sebagai user
-                                    </label>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" id="radio" name="akun">
+                                            <span class="cr"><i class="cr-icon fa fa-circle"></i></span>
+                                            <span class="cr-text">Checkout sebagai tamu</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" id="radio" name="akun">
+                                            <span class="cr"><i class="cr-icon fa fa-circle"></i></span>
+                                            <span class="cr-text">Checkout sebagai user</span>
+                                        </label>
+                                    </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-user-o"></i></div>
@@ -226,14 +230,23 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <h3>Data Informasi Anda</h3>
-                                    <input type="checkbox" id="checkbox">
-                                    Checkout sebagai tamu
+                                    <h3>Metode Pembayaran</h3>
+                                    <div class="form-group">
+                                        <div class="radio-container double">
+                                            <input type="radio" name="payment" id="payment_1">
+                                            <label class="radio double first" for="payment_1">
+                                                <img src="images/thumbnails/xendit.png" width="183" height="118" alt="Xendit Payment Method" class="img-responsive">
+                                            </label>
+                                            <input type="radio" name="payment" id="payment_2">
+                                            <label class="radio double" for="payment_2">
+                                                <img src="images/thumbnails/veritrans.png" width="183" height="118" alt="Veritrans Payment Method" class="img-responsive">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-submit">
+                                        <input type="submit" name="checkout" value="Lanjutkan" class="btn btn-orange">
+                                    </div>
                                 </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
                             </div>
                         </div>
                     </div>

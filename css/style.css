@@ -19,6 +19,15 @@
        url('../fonts/robotomedium.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../fonts/robotoregular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/robotoregular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/robotoregular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/robotoregular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/robotoregular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 /* - Font Smoothing - */
 html {
     text-rendering: optimizeLegibility !important;
@@ -119,6 +128,15 @@ p{
 }
 .box-color-black{
     background: #2a2a2a;
+}
+.box-color-orange{
+    background: #e16d39;
+}
+.box-color-orange h2{
+    color: #fff;
+}
+.box-color-orange p{
+    color: #fff;
 }
 .box-color-black h2{
     color: #fff;
@@ -346,14 +364,24 @@ p{
     display: table;
     clear: both;
 }
-.lamlam-form-1 .checkbox .cr,
-.lamlam-form-1 .radio .cr {
+.lamlam-form-1 .checkbox .cr {
     position: relative;
     display: inline-block;
     border: 1px solid #a9a9a9;
     background: #fff;
     width: 23px;
     height: 23px;
+    float: left;
+    margin-right: .5em;
+    top: 2px;
+}
+.lamlam-form-1 .radio .cr{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #d4d5d5;
+    background: #fff;
+    width: 17px;
+    height: 17px;
     float: left;
     margin-right: .5em;
     top: 2px;
@@ -367,10 +395,16 @@ p{
 .lamlam-form-1 .radio .cr {
     border-radius: 50%;
 }
-.lamlam-form-1 .checkbox .cr .cr-icon,
-.lamlam-form-1 .radio .cr .cr-icon {
+.lamlam-form-1 .checkbox .cr .cr-icon {
     position: absolute;
     font-size: .8em;
+    line-height: 0;
+    top: 50%;
+}
+.lamlam-form-1 .radio .cr .cr-icon {
+    position: absolute;
+    font-size: 15px;
+    color: #e16d39;
     line-height: 0;
     top: 50%;
 }
@@ -378,7 +412,7 @@ p{
     left: 20%;
 }
 .lamlam-form-1 .radio .cr .cr-icon {
-    left: 20%;
+    left: 1px;
 }
 .lamlam-form-1 .radio .cr .cr-icon {
     margin-left: 0.04em;
@@ -405,6 +439,23 @@ p{
 .lamlam-form-1 .checkbox.box-title{
     display: inline-block;
     white-space: nowrap;
+}
+
+/* - Select Item - */
+.radio-container{
+    text-align: center;
+}
+.radio-container input[type=radio]{
+    display: none;
+}
+.radio-container input[type=radio]:checked + .radio{
+    opacity: 0.4;
+}
+.radio-container .radio{
+    display: inline-block;
+}
+.radio-container .radio.first{
+    margin-right: 24px;
 }
 
 /* - Form Submit - */
@@ -1135,6 +1186,41 @@ call-support{
     margin: 35px 0 0;
 }
 
+/* - Checkout - */
+.modal-checkout .modal-content{
+    border-radius: 6px;
+}
+.modal-checkout .modal-header{
+    text-align: center;
+    background: #e16d39;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.modal-checkout .modal-title{
+    font-family: 'Roboto Regular', Fallback, sans-serif;
+    color: #fff;
+}
+.modal-checkout .modal-body{
+    padding: 45px 55px;
+}
+.checkout-content h3{
+    margin-bottom: 20px;
+}
+.checkout-content .lamlam-form-1 .radio label .cr-text{
+    opacity: 0.3;
+}
+.checkout-content .lamlam-form-1 .radio label input[type="radio"]:checked ~ .cr-text{
+    opacity: 1;
+}
+.checkout-content .lamlam-form-1 .radio .cr{
+    top: 5px;
+}
+.checkout-content .lamlam-form-1 .form-submit{
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 
 /* --- Footer --- */
 .footer-content{
@@ -1427,6 +1513,28 @@ call-support{
     }
     
 }
+@media screen and (max-width: 599px){
+    .checkout-content h3{
+        text-align: center;
+    }
+    .radio-container .radio{
+        display: block;
+    }
+    .radio-container .radio img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .radio-container .radio.first{
+        margin-right: 0;
+    }
+    .checkout-content .lamlam-form-1 .form-submit{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .checkout-content .lamlam-form-1 .form-submit .btn{
+        width: 240px;
+    }
+}
 @media screen and (max-width: 499px){
     /* --- Signup Form --- */
     .signup-form .panel-signup{
@@ -1528,6 +1636,10 @@ call-support{
 @media screen and (max-width: 399px){
     .cart-voucher .lamlam-form-1 .form-submit .btn,
     .cart-total .total-button .btn{
+        width: 100%;
+    }
+    /* --- Cart --- */
+    .checkout-content .lamlam-form-1 .form-submit .btn{
         width: 100%;
     }
 }
