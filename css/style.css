@@ -80,6 +80,23 @@ h3{
     color: #e2703d;
     opacity: 0.7;
 }
+.btn-transparent{
+    font-family: 'Roboto Medium', Fallback, sans-serif;
+    font-size: 17px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 15px 30px;
+}
+.btn-transparent:hover,
+.btn-transparent:focus,
+.btn-transparent.focus{
+    color: #fff;
+    opacity: 0.7;
+}
 
 /* - Paragraph - */
 p{
@@ -93,6 +110,21 @@ p{
     background: #f6f6f6;
     padding-top: 65px;
     padding-bottom: 80px;
+}
+.box-color-grey{
+    background: #f6f6f6;
+}
+.box-color-grey h2{
+    color: #2a2a2a;
+}
+.box-color-black{
+    background: #2a2a2a;
+}
+.box-color-black h2{
+    color: #fff;
+}
+.box-color-black p{
+    color: #fff;
 }
 
 /* Forms */
@@ -223,6 +255,21 @@ p{
 }
 .lamlam-form-1 .single-text:focus{
     border-color: #e9946e;
+}
+.lamlam-form-1 select.single-text{
+    color: #2a2a2a;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../images/icons/dropdown.png) no-repeat;
+    background-size: 10px 8px;
+    background-position: 95% center;
+    border-radius: 8px;
+    padding: 15px 25px;
+}
+.lamlam-form-1 textarea.single-text{
+    min-height: 140px;
+    padding: 25px;
+    border-radius: 8px;
 }
 
 /* - Captcha Fields - */
@@ -467,6 +514,7 @@ p{
     border-color: #fff;
     padding-top: 36px;
     padding-bottom: 36px;
+    margin-bottom: 0;
 }
 .navbar-home .navbar-header{
     float: none;
@@ -624,21 +672,8 @@ p{
     letter-spacing: 0;
     opacity: 0.75;
 }
-.home-advantages .black{
-    background: #2a2a2a;
-}
-.home-advantages .black h2{
-    color: #fff;
-}
-.home-advantages .black p{
-    color: #fff;
+.home-advantages .box-color-black p{
     opacity: 0.75;
-}
-.home-advantages .grey{
-    background: #f6f6f6;
-}
-.home-advantages .grey h2{
-    color: #2a2a2a;
 }
 .home-advantages .advan-top{
     padding-top: 55px;
@@ -826,6 +861,280 @@ p{
     color: #fff;
 }
 
+/* --- Support --- */
+/* - Frequently Asked Question (FAQ) - */
+/*
+#map {
+    width: 100%; height: 400px; margin-top: 40px; margin-bottom: 40px;
+}
+*/
+.faq-content{
+    padding-top: 100px;
+    padding-bottom: 90px;
+}
+.faq-content .faq-list{
+    padding-right: 55px;
+}
+.faq-list h1{
+    margin-bottom: 20px;
+}
+.faq-list ul .faq-question{
+    position: relative;
+    padding: 20px 0 20px 40px;
+    border-bottom: 1px dashed #a9a9a9;
+}
+.faq-list ul .faq-question a{
+    font-family: 'Roboto Light', Fallback, sans-serif;
+    font-size: 25px;
+    line-height: normal;
+    letter-spacing: -0.023em;
+    color: #2a2a2a;
+}
+.faq-list ul .faq-question:before{
+    font-family: 'Glyphicons Halflings';
+    font-size: 15px;
+    line-height: 75px;
+    text-indent: 0.3em;
+    content: "\e072";
+    color: #4c4c4c;
+    float: left;
+    width: 1.4em;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+}
+.faq-form .panel{
+    padding: 38px 42px;
+    border: none;
+}
+.faq-form h2{
+    margin-bottom: 35px;
+}
+.faq-form .form-submit{
+    margin-top: 0;
+}
+
+/* - Call Support - */
+call-support{
+    max-width: 1440px;
+}
+.call-support .row{
+    margin-left: auto;
+    margin-right: auto;
+}
+.call-support .cs-map{
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+.cs-map iframe{
+    height: 595px;
+}
+.call-support .cs-form{
+    padding: 70px 65px;
+}
+.cs-form h2{
+    margin-bottom: 30px;
+}
+.cs-form .lamlam-form-1 .input-group,
+.cs-form .lamlam-form-1 .form-submit,
+.cs-form.lamlam-form-1 textarea.single-text,
+.cs-form .lamlam-form-1 .form-control{
+    max-width: 420px;
+    margin-left: 0;
+    margin-right: auto;
+}
+.cs-form .lamlam-form-1 .input-group-addon,
+.cs-form .lamlam-form-1 .form-control{
+    background: transparent;
+}
+
+
+/* --- Cart --- */
+/* - Cart Table - */
+.cart-table .cart-title{
+    margin-bottom: 45px;
+}
+.cart-table .cart-content{
+    margin-bottom: 65px;
+}
+.cart-content > thead > tr > th{
+    padding: 20px;
+    font-family: 'Roboto Medium', Fallback, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0;
+    font-weight: normal;
+    color: #fff;
+    background: #e16d39;
+    border-bottom: none;
+}
+.cart-content > thead:first-child > tr > th:first-child{
+    border-top-left-radius: 8px;
+}
+.cart-content > thead:first-child > tr > th:last-child{
+    border-top-right-radius: 8px;
+}
+.cart-content > tbody{
+    border-bottom: 1px solid #e8e8e8;
+}
+.cart-content > tbody > tr > td{
+    padding: 20px;
+    font-family: 'Roboto Regular', Fallback, sans-serif;
+    font-size: 15px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #2a2a2a;
+    background: #fff;
+    border-top-color: #e8e8e8;
+}
+.cart-content .cart-count{
+    padding-top: 12px;
+    padding-bottom: 0;
+}
+.cart-count .cart-counter{
+    width: 94px;
+    height: auto;
+    border-radius: 4px;
+    z-index: 99;
+}
+.cart-count .cart-counter:before,
+.cart-count .cart-counter:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.cart-counter .form-control{
+    border: none;
+    box-shadow: none;
+    width: 66%;
+    float: left;
+    display: block;
+    border: 1px solid #cacaca;
+    border-right: none;
+    border-radius: 0;
+    height: 41px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    text-align: center;
+}
+.cart-counter .counter{
+    width: 34%;
+    float: left;
+    display: block;
+}
+.cart-counter .counter-up,
+.cart-counter .counter-down{
+    height: auto;
+    padding: 0 12px;
+    border: none;
+    line-height: normal;
+    border-radius: 0;
+    width: 100%;
+    display: block;
+    right: -1px;
+    border: 1px solid #cacaca;
+    z-index: 10;
+}
+.cart-counter .counter-up:focus,
+.cart-counter .counter-down:focus{
+    outline: none;
+    outline-offset: 0;
+}
+.cart-counter .counter-up{
+    border-bottom: 1px solid #cacaca;
+    border-top-right-radius: 6px;
+}
+.cart-counter .counter-up .fa{
+    position: relative;
+    top: 3px;
+}
+.cart-counter .counter-down{
+    border-bottom-right-radius: 6px;
+    border-top: none;
+}
+.cart-counter .counter-down .fa{
+    position: relative;
+    top: -3px;
+}
+
+/* - Cart Voucher Panel - */
+.cart-voucher{
+    margin-bottom: 65px;
+}
+.cart-voucher .panel{
+    padding: 15px 30px 30px 30px;
+    text-align: center;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 6px;
+}
+.cart-voucher .cart-title{
+    margin-bottom: 24px;
+}
+.cart-voucher .form-control{
+    text-align: center;
+}
+.cart-voucher .form-submit{
+    margin-top: 20px;
+}
+
+/* - Cart Total Panel - */
+.cart-total .panel{
+    width: 450px;
+    padding: 35px;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 6px;
+}
+.cart-total .cart-title{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.cart-total .total-content{
+    margin-left: 0;
+    margin-right: 0;
+}
+.total-content.top{
+    border-bottom: 1px solid #e8e8e8;
+}
+.total-content.top p{
+    font-family: 'Roboto Regular', Fallback, sans-serif;
+    font-size: 15px;
+    line-height: normal;
+    letter-spacing: 0;
+    margin-bottom: 12px;
+}
+.total-content.top .subtotal{
+    color: #9d9d9d;
+}
+.total-content .total-left{
+    padding-left: 0;
+}
+.total-content .total-right{
+    padding-right: 0;
+    text-align: right;
+}
+.total-content.bottom p{
+    font-family: 'Roboto Medium', Fallback, sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    letter-spacing: 0;
+    margin-top: 12px;
+}
+.total-content.bottom .grandtotal-nominal{
+    color: #e16d39;
+}
+.cart-total .total-button{
+    text-align: right;
+    margin: 35px 0 0;
+}
+
 
 /* --- Footer --- */
 .footer-content{
@@ -937,6 +1246,11 @@ p{
         margin-right: auto;
     }
     
+    /* --- Support --- */
+    .faq-content .faq-list{
+        padding-right: 30px;
+    }
+    
     /* --- Footer --- */
     .footer-content .footer-desc{
         margin-bottom: 30px;
@@ -959,6 +1273,7 @@ p{
     }
 }
 @media screen and (max-width: 1119px){
+    /* --- Navbar --- */
     .navbar-home .navbar-nav{
         float: none;
         display: inline-block;
@@ -989,6 +1304,23 @@ p{
     .navbar-home .navbar-right{
         width: auto;
     }
+    
+    /* --- Support --- */
+    .faq-list ul .faq-question:before{
+        line-height: 105px;
+    }
+    .faq-form .panel{
+        padding: 20px 30px 30px;
+    }
+    .faq-form h2{
+        margin-bottom: 15px;
+    }
+    
+    /* --- Cart --- */
+    .cart-voucher .lamlam-form-1 .form-submit .btn{
+        width: 240px;
+    }
+    
 }
 @media screen and (max-width: 767px){
     /* --- Navbar --- */
@@ -1030,16 +1362,62 @@ p{
         max-width: 100%;
         height: auto;
     }
+    /* - Feature - */
+    .feature-item p{
+        width: 100%;
+    }
     
     /* --- Pricing --- */
     .pricing-table .pricing-title{
         width: 100%;
     }
     
-    /* - Feature - */
-    .feature-item p{
+    /* --- Support --- */
+    /* - FAQ - */
+    .faq-content .faq-list{
+        padding-right: 15px;
+        margin-bottom: 45px;
+    }
+    .faq-list h1{
+        margin-bottom: 0;
+    }
+    .faq-list ul .faq-question:before{
+        line-height: 75px;
+    }
+    /* - Call Support - */
+    .cs-form .lamlam-form-1 .input-group,
+    .cs-form .lamlam-form-1 .form-submit,
+    .cs-form.lamlam-form-1 textarea.single-text,
+    .cs-form .lamlam-form-1 .form-control{
+        max-width: none;
+    }
+    
+    /* --- Cart --- */
+    .cart-table .cart-content{
+        margin-bottom: 0;
+    }
+    .cart-table .cart-responsive{
+        margin-bottom: 65px;
+    }
+    .cart-total .panel{
         width: 100%;
     }
+    .cart-total .total-button{
+        text-align: center;
+    }
+    .cart-total .total-button .btn{
+        width: 240px;
+    }
+    .total-content .total-left{
+        width: 50%;
+        float: left;
+    }
+    .total-content .total-right{
+        width: 50%;
+        float: left;
+    }
+    
+    
 }
 @media screen and (max-width: 649px){
     /* --- Signup Form --- */
@@ -1110,6 +1488,17 @@ p{
         padding-right: 15px;
     }
     
+    /* --- Support --- */
+    /* - FAQ - */
+    .faq-form .panel{
+        padding: 15px 20px 30px;
+    }
+    
+    /* - Call Support - */
+    .call-support .cs-form{
+        padding: 30px 30px 65px 30px;
+    }
+    
     /* --- Footer --- */
     .footer-content{
         padding-bottom: 40px;
@@ -1134,4 +1523,11 @@ p{
         text-align: center;
     }
     
+}
+
+@media screen and (max-width: 399px){
+    .cart-voucher .lamlam-form-1 .form-submit .btn,
+    .cart-total .total-button .btn{
+        width: 100%;
+    }
 }
