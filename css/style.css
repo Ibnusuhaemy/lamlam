@@ -1278,6 +1278,27 @@ call-support{
 }
 
 
+/* --- Template --- */
+.template-list .template-item{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background: #fff;
+    margin-bottom: 30px;
+}
+.template-item .thumbnail{
+    height: 325px;
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 0;
+}
+.template-item .thumbnail img{
+    width: 100%;
+}
+
+
 /* --- Media Queries --- */
 @-ms-viewport{
     width: device-width;
