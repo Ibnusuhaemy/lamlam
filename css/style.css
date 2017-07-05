@@ -1629,8 +1629,11 @@ call-support{
     }
     
     /* - Template - */
-    #fancybox-wrap{
+    #fancybox-wrap,
+    #fancybox-content,
+    #fancybox-title{
         width: auto !important;
+        height: auto !important;
     }
     
     /* --- Footer --- */
