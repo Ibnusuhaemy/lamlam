@@ -1628,6 +1628,11 @@ call-support{
         padding: 30px 30px 65px 30px;
     }
     
+    /* - Template - */
+    #fancybox-wrap{
+        width: auto !important;
+    }
+    
     /* --- Footer --- */
     .footer-content{
         padding-bottom: 40px;
