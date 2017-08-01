@@ -402,9 +402,7 @@ p{
 
 /* Content Statistic */
 .dashboard-content .dashboard-stats{
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 60px;
+    padding: 0 15px 60px;
 }
 .dashboard-stats .stats-title{
     font-family: 'Roboto Light', Fallback, sans-serif;
@@ -423,7 +421,7 @@ p{
     padding-bottom: 55px;
 }
 .stats-detail .stats-left,
-.stats-detail .stats-left{
+.stats-detail .stats-right{
     padding-left: 0;
     padding-right: 0;
 }
@@ -451,4 +449,276 @@ p{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+/* --- Media Query --- */
+@-ms-viewport{
+    width: device-width;
+}
+
+@media screen and (max-width: 1339px){
+    /* --- Content Feature --- */
+    .feature-detail .feature-point{
+        font-size: 20px;
+        line-height: normal;
+    }
+    .feature-detail .caption-detail{
+        font-size: 14px;
+        line-height: normal;
+    }
+}
+@media screen and (max-width: 1199px){
+    .dashboard-feature .panel-feature{
+        min-height: 105px;
+    }
+    .stats-detail .stats-left{
+        padding-right: 15px;
+    }
+    .stats-detail .stats-right{
+        padding-left: 15px;
+    }
+}
+@media screen and (max-width: 991px){
+    .dashboard-stats .stats-graph{
+        margin-bottom: 40px;
+    }
+    .navbar-search .navbar-form .input-group{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 859px){
+    .dashboard-sidebar .dashboard-logo{
+        padding: 15px;
+    }
+    .dashboard-logo .sidebar-toggle{
+        float: right;
+        top: -5px;
+    }
+    .dashboard-container{
+        overflow: hidden;
+    }
+    .dashboard-sidebar{
+        left: -230px;
+        z-index: 10;
+    }
+    .dashboard-sidebar.active{
+        left: 0;
+    }
+    .dashboard-content{
+        margin-left: 70px;
+    }
+    .dashboard-content.active{
+        margin-left: 300px;
+    }
+    
+    /* --- Animation --- */
+    /* General Setting */
+    .animated{
+        -webkit-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+        -webkit-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    /* Middle Content Slide In Left */
+    @-webkit-keyframes slideInLeft{
+        from{
+            -webkit-transform: translate3d(-19.51%, 0, 0);
+            -moz-transform: translate3d(-19.51%, 0, 0);
+            -o-transform: translate3d(-19.51%, 0, 0);
+            transform: translate3d(-19.51%, 0, 0);
+            visibility: visible;
+        }
+        to{
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    @-moz-keyframes slideInLeft{
+        from{
+            -webkit-transform: translate3d(-19.51%, 0, 0);
+            -moz-transform: translate3d(-19.51%, 0, 0);
+            -o-transform: translate3d(-19.51%, 0, 0);
+            transform: translate3d(-19.51%, 0, 0);
+            visibility: visible;
+        }
+        to{
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    @-o-keyframes slideInLeft{
+        from{
+            -webkit-transform: translate3d(-19.51%, 0, 0);
+            -moz-transform: translate3d(-19.51%, 0, 0);
+            -o-transform: translate3d(-19.51%, 0, 0);
+            transform: translate3d(-19.51%, 0, 0);
+            visibility: visible;
+        }
+        to{
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    @keyframes slideInLeft{
+        from{
+            -webkit-transform: translate3d(-19.51%, 0, 0);
+            -moz-transform: translate3d(-19.51%, 0, 0);
+            -o-transform: translate3d(-19.51%, 0, 0);
+            transform: translate3d(-19.51%, 0, 0);
+            visibility: visible;
+        }
+        to{
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    .slideInLeft {
+        -webkit-animation-name: slideInLeft;
+        -moz-animation-name: slideInLeft;
+        -o-animation-name: slideInLeft;
+        animation-name: slideInLeft;
+    }
+    /* ------------------------------------------ */
+    
+    /* Middle Content Slide In Right */
+    @-webkit-keyframes slideInRight{
+        from{
+            -webkit-transform: translate3d(19.51%, 0, 0);
+            -moz-transform: translate3d(19.51%, 0, 0);
+            -o-transform: translate3d(19.51%, 0, 0);
+            transform: translate3d(19.51%, 0, 0);
+            visibility: visible;
+        }
+        to{
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    @-moz-keyframes slideInRight{
+        from{
+            -webkit-transform: translate3d(19.51%, 0, 0);
+            -moz-transform: translate3d(19.51%, 0, 0);
+            -o-transform: translate3d(19.51%, 0, 0);
+            transform: translate3d(19.51%, 0, 0);
+            visibility: visible;
+        }
+        to{
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    @-o-keyframes slideInRight{
+        from{
+            -webkit-transform: translate3d(19.51%, 0, 0);
+            -moz-transform: translate3d(19.51%, 0, 0);
+            -o-transform: translate3d(19.51%, 0, 0);
+            transform: translate3d(19.51%, 0, 0);
+            visibility: visible;
+        }
+        to{
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    @keyframes slideInRight{
+        from{
+            -webkit-transform: translate3d(19.51%, 0, 0);
+            -moz-transform: translate3d(19.51%, 0, 0);
+            -o-transform: translate3d(19.51%, 0, 0);
+            transform: translate3d(19.51%, 0, 0);
+            visibility: visible;
+        }
+        to{
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    .slideInRight{
+        -webkit-animation-name: slideInRight;
+        -moz-animation-name: slideInRight;
+        -o-animation-name: slideInRight;
+        animation-name: slideInRight;
+    }
+    /* ------------------------------------------ */
+    
+}
+
+@media screen and (max-width: 767px){
+    .navbar-search .navbar-nav{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .navbar-profile > li{
+        display: inline-block;
+        vertical-align: top;
+    }
+    .navbar-profile .open .dropdown-menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        border: 1px solid #e7e7e7;
+        width: 100%;
+    }
+    .navbar-profile .dropdown-menu .divider{
+        margin: 0;
+    }
+    .dashboard-title .title-right{
+        text-align: left;
+        margin-top: 15px;
+    }
+    .stats-detail .stats-right{
+        padding-left: 0;
+    }
+    .dashboard-stats .panel{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 479px){
+    .dashboard-content .dashboard-title{
+        padding: 30px 0;
+    }
+    .dashboard-content .dashboard-feature{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .dashboard-content .dashboard-stats{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar-search .navbar-profile{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar-profile > li{
+        display: block;
+    }
+    .navbar-profile .dropdown > a,
+    .navbar-profile .navbar-notif > a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }

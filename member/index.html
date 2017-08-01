@@ -26,12 +26,12 @@
     <body>
         
         <!-- Sidebar -->
-        <div class="dashboard-container">
+        <div class="dashboard-container right">
            
-            <div class="dashboard-sidebar">
+            <div class="dashboard-sidebar animated left">
                 <div class="dashboard-logo">
                     <img src="images/lamlam-logo.png" width="915" height="415" alt="LamLam Logo" class="img-responsive">
-                    <button type="button" class="navbar-toggle sidebar-toggle">
+                    <button type="button" class="navbar-toggle sidebar-toggle" data-toggle="offcanvas">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -98,7 +98,7 @@
 
                 <div class="dashboard-feature">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-6 col-lg-3">
                             <div class="panel panel-default panel-feature">
                                 <span class="feature-icon fa fa-globe"></span>
                                 <div class="feature-detail">
@@ -107,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6 col-lg-3">
                             <div class="panel panel-default panel-feature">
                                 <span class="feature-icon fa fa-database"></span>
                                 <div class="feature-detail">
@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6 col-lg-3">
                             <div class="panel panel-default panel-feature">
                                 <span class="feature-icon fa fa-shield"></span>
                                 <div class="feature-detail">
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6 col-lg-3">
                             <div class="panel panel-default panel-feature">
                                 <span class="feature-icon fa fa-envelope"></span>
                                 <div class="feature-detail">
@@ -140,18 +140,18 @@
                 <div class="dashboard-stats">
                     <div class="row">
         <!--                        <div class="dashboard-cart" id="statschart" style="width:100%; height:400px;"></div>-->
-                        <div class="col-sm-6 col-md-8 stats-graph">
+                        <div class="col-md-12 col-lg-8 stats-graph">
                             <div class="panel panel-default panel-graph">
                                 <h2 class="stats-title">Grafik Server</h2>
-                                <div class="dashboard-cart" id="chartContainer" style="width:100%; height:400px;"></div>
+                                <div class="dashboard-cart" id="chartContainer" style="width:100%; height:335px;"></div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4 stats-detail">
+                        <div class="col-md-12 col-lg-4 stats-detail">
                             <div class="panel panel-default">
                                 <h2 class="stats-title">Info Paket</h2>
                                 <hr class="stats-separator">
                                 <div class="row">
-                                    <div class="col-md-6 stats-left">
+                                    <div class="col-sm-6 stats-left">
                                         <div class="package-container">
                                             <p class="caption-detail">Paket</p>
                                             <p class="caption-info">Standard</p>
@@ -165,7 +165,7 @@
                                             <p class="caption-info">1</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 stats-right">
+                                    <div class="col-sm-6 stats-right">
                                         <div class="package-container">
                                             <p class="caption-detail">WebMail</p>
                                             <p class="caption-info">1 Mail</p>
@@ -246,6 +246,9 @@
                     tickLength: 10,
                     tickThickness: 1
                 },
+                toolTip: {
+                    fontColor: "#e2703c"
+                },
                 axisY:{
                     lineColor: "#FFFFFF",
                     gridThickness: 1,
@@ -253,7 +256,8 @@
                     gridColor: "#e2703c",
                     tickLength: 5,
                     tickColor: "white",
-                    tickThickness: 5
+                    tickThickness: 5,
+                    interval: 20
                 },
                 data: [{
                     type: "area",
@@ -263,13 +267,13 @@
                     color: "rgba(251, 240, 228, 0.5)",
                     markerColor: "#ffffff",
                     dataPoints: [//array
-                        { y: 45, label: "Senin" },
-                        { y: 30, label: "Selasa" },
-                        { y: 23, label: "Rabu" },
-                        { y: 46, label: "Kamis" },
-                        { y: 47, label: "Jum'at" },
-                        { y: 50, label: "Sabtu" },
-                        { y: 60, label: "Minggu" }
+                        { y: 55, label: "Senin" },
+                        { y: 35, label: "Selasa" },
+                        { y: 20, label: "Rabu" },
+                        { y: 40, label: "Kamis" },
+                        { y: 57, label: "Jum'at" },
+                        { y: 54, label: "Sabtu" },
+                        { y: 40, label: "Minggu" }
                     ]
                 }]
             });
@@ -278,6 +282,34 @@
     }
     </script>
     <script src="plugins/canvas/canvasjs.min.js"></script>
-        
-    </body>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var action = 1;
+
+            $("[data-toggle=offcanvas]").on("click", viewSomething);
+
+            function viewSomething() {
+                if ( action == 1 ) {
+                    $('.right').addClass('active');
+                    $('.left').addClass('active');
+
+                    $('.animated').addClass('slideInLeft');
+                    $('.animated').removeClass('slideInRight');
+
+                    action = 2;
+                } else {
+                    $('.animated').removeClass('slideInLeft');
+                    $('.animated').addClass('slideInRight');
+
+                    $('.right').removeClass('active');
+                    $('.left').removeClass('active');
+
+                    action = 1;
+                }
+            }
+        });
+    </script>
+    
+</body>
 </html>
