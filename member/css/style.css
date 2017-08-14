@@ -927,7 +927,7 @@ p{
     margin-bottom: 30px;
 }
 .dashboard-domain .panel .panel-body{
-    padding: 0 15px;
+    padding: 0;
 }
 .dashboard-domain .form-domain{
     padding-left: 15px;
