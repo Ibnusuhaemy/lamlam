@@ -1383,10 +1383,10 @@ p{
     /* Middle Content Slide In Left */
     @-webkit-keyframes slideInLeft{
         from{
-            -webkit-transform: translate3d(-19.51%, 0, 0);
-            -moz-transform: translate3d(-19.51%, 0, 0);
-            -o-transform: translate3d(-19.51%, 0, 0);
-            transform: translate3d(-19.51%, 0, 0);
+            -webkit-transform: translate3d(-75%, 0, 0);
+            -moz-transform: translate3d(-75%, 0, 0);
+            -o-transform: translate3d(-75%, 0, 0);
+            transform: translate3d(-75%, 0, 0);
             visibility: visible;
         }
         to{
@@ -1398,10 +1398,10 @@ p{
     }
     @-moz-keyframes slideInLeft{
         from{
-            -webkit-transform: translate3d(-19.51%, 0, 0);
-            -moz-transform: translate3d(-19.51%, 0, 0);
-            -o-transform: translate3d(-19.51%, 0, 0);
-            transform: translate3d(-19.51%, 0, 0);
+            -webkit-transform: translate3d(-75%, 0, 0);
+            -moz-transform: translate3d(-75%, 0, 0);
+            -o-transform: translate3d(-75%, 0, 0);
+            transform: translate3d(-75%, 0, 0);
             visibility: visible;
         }
         to{
@@ -1413,10 +1413,10 @@ p{
     }
     @-o-keyframes slideInLeft{
         from{
-            -webkit-transform: translate3d(-19.51%, 0, 0);
-            -moz-transform: translate3d(-19.51%, 0, 0);
-            -o-transform: translate3d(-19.51%, 0, 0);
-            transform: translate3d(-19.51%, 0, 0);
+            -webkit-transform: translate3d(-75%, 0, 0);
+            -moz-transform: translate3d(-75%, 0, 0);
+            -o-transform: translate3d(-75%, 0, 0);
+            transform: translate3d(-75%, 0, 0);
             visibility: visible;
         }
         to{
@@ -1428,10 +1428,10 @@ p{
     }
     @keyframes slideInLeft{
         from{
-            -webkit-transform: translate3d(-19.51%, 0, 0);
-            -moz-transform: translate3d(-19.51%, 0, 0);
-            -o-transform: translate3d(-19.51%, 0, 0);
-            transform: translate3d(-19.51%, 0, 0);
+            -webkit-transform: translate3d(-75%, 0, 0);
+            -moz-transform: translate3d(-75%, 0, 0);
+            -o-transform: translate3d(-75%, 0, 0);
+            transform: translate3d(-75%, 0, 0);
             visibility: visible;
         }
         to{
@@ -1453,10 +1453,10 @@ p{
     /* Middle Content Slide In Right */
     @-webkit-keyframes slideInRight{
         from{
-            -webkit-transform: translate3d(19.51%, 0, 0);
-            -moz-transform: translate3d(19.51%, 0, 0);
-            -o-transform: translate3d(19.51%, 0, 0);
-            transform: translate3d(19.51%, 0, 0);
+            -webkit-transform: translate3d(75%, 0, 0);
+            -moz-transform: translate3d(75%, 0, 0);
+            -o-transform: translate3d(75%, 0, 0);
+            transform: translate3d(75%, 0, 0);
             visibility: visible;
         }
         to{
@@ -1468,10 +1468,10 @@ p{
     }
     @-moz-keyframes slideInRight{
         from{
-            -webkit-transform: translate3d(19.51%, 0, 0);
-            -moz-transform: translate3d(19.51%, 0, 0);
-            -o-transform: translate3d(19.51%, 0, 0);
-            transform: translate3d(19.51%, 0, 0);
+            -webkit-transform: translate3d(75%, 0, 0);
+            -moz-transform: translate3d(75%, 0, 0);
+            -o-transform: translate3d(75%, 0, 0);
+            transform: translate3d(75%, 0, 0);
             visibility: visible;
         }
         to{
@@ -1483,10 +1483,10 @@ p{
     }
     @-o-keyframes slideInRight{
         from{
-            -webkit-transform: translate3d(19.51%, 0, 0);
-            -moz-transform: translate3d(19.51%, 0, 0);
-            -o-transform: translate3d(19.51%, 0, 0);
-            transform: translate3d(19.51%, 0, 0);
+            -webkit-transform: translate3d(75%, 0, 0);
+            -moz-transform: translate3d(75%, 0, 0);
+            -o-transform: translate3d(75%, 0, 0);
+            transform: translate3d(75%, 0, 0);
             visibility: visible;
         }
         to{
@@ -1498,10 +1498,10 @@ p{
     }
     @keyframes slideInRight{
         from{
-            -webkit-transform: translate3d(19.51%, 0, 0);
-            -moz-transform: translate3d(19.51%, 0, 0);
-            -o-transform: translate3d(19.51%, 0, 0);
-            transform: translate3d(19.51%, 0, 0);
+            -webkit-transform: translate3d(75%, 0, 0);
+            -moz-transform: translate3d(75%, 0, 0);
+            -o-transform: translate3d(75%, 0, 0);
+            transform: translate3d(75%, 0, 0);
             visibility: visible;
         }
         to{
