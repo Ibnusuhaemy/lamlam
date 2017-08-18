@@ -197,6 +197,89 @@ h3{
 .form-inline .btn{
     font-size: 14px;
 }
+/* Button Cog a.k.a. setting */
+.btn-setting .btn,
+.btn-setting .btn-default:active,
+.btn-setting .btn-default:focus,
+.btn-setting .btn:active{
+    padding: 10px !important;
+    border: 1px solid transparent;
+    border-bottom: none;
+    box-shadow: none;
+    background: #fff;
+}
+.btn-setting .btn:hover{
+    background-color: #fff;
+}
+.btn-setting.open > .dropdown-toggle.btn-default:hover,
+.btn-setting.open > .dropdown-toggle.btn-default:focus,
+.btn-setting.open > .dropdown-toggle.btn-default:active,
+.btn-setting.open > .dropdown-toggle.btn-default{
+    background-color: #fff;
+    box-shadow: none;
+    border-color: #e0eaed;
+    border-radius: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    z-index: 2000;
+}
+.btn-setting.btn-group.open .dropdown-toggle{
+    box-shadow: none;
+}
+.btn-setting .fa{
+    font-size: 24px;
+    color: #8399a2;
+}
+.btn-setting .dropdown-menu{
+    border-color: #e0eaed;
+    box-shadow: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: -1px;
+    left: auto;
+    right: 0;
+}
+.btn-setting .dropdown-menu li .fa{
+    font-size: 14px;
+    margin-right: 5px;
+}
+.btn-setting .dropdown-menu > li > a{
+    padding: 8px 12px;
+    font-family: 'Roboto Medium', Fallback, sans-serif;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #57676b;
+}
+
+/* - Custom Radio Button - */
+.radio-container input[type="radio"]{
+    display: none;
+}
+.radio-container input[type="radio"]:checked + .radio-panel{
+    border: 1px solid #e16d39;
+    background-color: #fbf0e4;
+}
+.radio-container input[type="radio"]:checked + .radio-panel .radio-header{
+    color: #e16d39;
+}
+.radio-container .radio{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.radio .radio-label{
+    padding-left: 0;
+    position: relative;
+    display: block;
+}
+.radio .radio-label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.radio-label .panel{
+    display: block;
+}
 
 /* - Paragraph - */
 p{
@@ -243,6 +326,16 @@ p{
     text-align: left;
 }
 
+/* - Dynamic Text - */
+.dinamyc-text{
+    font-family: 'Roboto Regular', Fallback, sans-serif;
+    font-size: 15px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #8399a2;
+    padding-top: 10px;
+}
+
 /* - Fields - */
 .dashboard-form .form-control{
     border: 1px solid #e0eaed;
@@ -259,21 +352,6 @@ p{
     letter-spacing: 0;
     height: auto;
     color: #8399a2;
-}
-.dashboard-form .form-control::-moz-placeholder{
-/*    color: #8399a2;*/
-}
-.dashboard-form .form-control:-moz-placeholder{
-/*    color: #8399a2;*/
-}
-.dashboard-form .form-control:-ms-input-placeholder{
-/*    color: #8399a2;*/
-}
-.dashboard-form .form-control:focus:-ms-input-placeholder{
-/*    color: #8399a2;*/
-}
-.dashboard-form .form-control::-webkit-input-placeholder{
-/*    color: #8399a2;*/
 }
 .dashboard-form .input-group .form-control{
     border: 1px solid #e0eaed;
@@ -873,6 +951,9 @@ p{
 .form-mysite .input-group{
     padding-right: 15px;
 }
+.dashboard-site .panel-site{
+    position: relative;
+}
 .panel-site .preview-site{
     padding-top: 8px;
     padding-right: 24px;
@@ -910,6 +991,57 @@ p{
 .panel-site .btn{
     font-size: 14px;
     padding: 12px 35px;
+}
+.panel-site .btn-setting{
+    position: absolute;
+    top: 25px;
+    right: 35px;
+}
+
+/* - Choose Domain Pop Up - */
+.modal-mysite .modal-header{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.modal-mysite .modal-title{
+    font-family: 'Roboto Light', Fallback, sans-serif;
+    font-size: 35px;
+    line-height: normal;
+    letter-spacing: -0.023em;
+    color: #57676b;
+}
+.modal-mysite .modal-header .close{
+    margin-top: 0;
+    padding-top: 8px;
+    padding-right: 12px;
+}
+.modal-mysite .modal-header .close .fa-times:before{
+    content: url(../images/icons/times.png);
+}
+.modal-mysite .modal-body{
+    padding: 40px 35px;
+}
+.modal-mysite .panel-feature .fa-globe:before{
+    content: url(../images/icons/globe-medium.png);
+}
+.modal-mysite .panel-feature .feature-icon.fa-globe{
+    top: 10px;
+}
+.modal-mysite .feature-detail .feature-point{
+    font-size: 25px;
+    line-height: 30px;
+}
+.modal-mysite .feature-detail .caption-detail .bold{
+    color: #5f6a6f;
+}
+.modal-mysite .btn-order{
+    text-align: center;
+    margin-top: 15px;
+}
+.modal-mysite .btn-order .btn{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
@@ -1035,6 +1167,63 @@ p{
 }
 
 
+/* --- New Domain --- */
+.dashboard-content .dashboard-domnew{
+    width: 600px;
+}
+.dashboard-domnew .check-content{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Atlask Grotesk', Fallback, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0;
+    color: #5f6a6f;
+    margin-right: 35px;
+}
+.dashboard-domnew .btn{
+    width: auto;
+}
+
+
+/* --- New Webmail --- */
+.dashboard-content .dashboard-newebmail{
+    width: 750px;
+}
+.dashboard-newebmail .input-group .input-group-addon{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 0 20px 0 30px;
+}
+.dashboard-newebmail .chosen-container{
+    border-left: 1px solid #e0eaed;
+    padding-bottom: 10px;
+}
+.dashboard-newebmail .chosen-container-single .chosen-single{
+    border: none;
+    border-radius: 0;
+    height: auto;
+    font-family: 'Roboto Regular', Fallback, sans-serif;
+    font-size: 15px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #8399a2;
+}
+.dashboard-newebmail .chosen-container .chosen-drop{
+    border-color: #e0eaed;
+    margin-top: 1px;
+    top: 107%;
+}
+.dashboard-newebmail .group-domain{
+    width: 500px;
+}
+.dashboard-newebmail .pass-control{
+    width: 300px;
+}
+
+
+
 /* --- Media Query --- */
 @-ms-viewport{
     width: device-width;
@@ -1082,6 +1271,11 @@ p{
         margin-left: auto;
     }
     
+    /* --- New Webmail --- */
+    .dashboard-content .dashboard-newebmail{
+        width: 100%;
+    }
+    
 }
 @media screen and (max-width: 991px){
     .dashboard-stats .stats-graph{
@@ -1105,6 +1299,18 @@ p{
     .form-mysite .btn{
         margin-left: 0;
     }
+    .modal-mysite .modal-body{
+        padding: 25px;
+    }
+    .modal-mysite .panel-feature .feature-icon.fa-globe{
+        top: 5px;
+    }
+    .modal-mysite .radio-label .panel{
+        padding: 15px;
+    }
+    .modal-mysite .feature-detail .feature-point{
+        font-size: 18px;
+    }
         
     /* --- Domain --- */
     .dashboard-domain .form-domain{
@@ -1120,6 +1326,19 @@ p{
     }
     .form-domain .form-right{
         padding-left: 0;
+    }
+    
+    /* --- New Domain --- */
+    .dashboard-content .dashboard-domnew{
+        width: 100%;
+    }
+    
+    /* --- New Webmail --- */
+    .dashboard-newebmail .group-domain{
+        width: 100%;
+    }
+    .dashboard-newebmail .pass-control{
+        width: 100%;
     }
     
 }
@@ -1303,6 +1522,7 @@ p{
 }
 
 @media screen and (max-width: 767px){
+    /* --- General Styles --- */
     .navbar-search .navbar-nav{
         margin-left: 0;
         margin-right: 0;
@@ -1337,7 +1557,19 @@ p{
         padding: 20px;
     }
     
+    /* --- My Sites --- */
+    .modal-mysite .modal-header{
+        padding: 15px;
+    }
+    .modal-mysite .modal-body{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
     /* --- Domain --- */
+    .modal-mysite{
+        overflow: scroll;
+    }
     .dashboard-domain .form-domain{
         padding-left: 0;
         padding-right: 0;
@@ -1363,6 +1595,20 @@ p{
     .dashboard-content .dashboard-editpf{
         width: 100%;
     }
+    
+    /* --- New Web --- */
+    .dashboard-newebmail .input-group .input-group-addon{
+        padding-left: 5px;
+    }
+    .dashboard-newebmail .control-label,
+    .dashboard-newebmail .fields{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .dashboard-newebmail .input-group .form-control{
+        padding-right: 5px;
+    }
+    
 }
 @media screen and (max-width: 479px){
     .dashboard-content .dashboard-title{
