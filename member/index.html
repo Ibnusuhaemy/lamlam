@@ -155,7 +155,6 @@
 
                 <div class="dashboard-stats">
                     <div class="row">
-        <!--                        <div class="dashboard-cart" id="statschart" style="width:100%; height:400px;"></div>-->
                         <div class="col-md-12 col-lg-8 stats-graph">
                             <div class="panel panel-default panel-graph">
                                 <h2 class="stats-title">Grafik Server</h2>
@@ -210,92 +209,56 @@
         <!-- Javascript -->
         <script type="text/javascript" src="js/jquery.3.2.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
-<!--        <script type="text/javascript" src="plugins/highcharts/js/highcharts.js"></script>-->
         <script type="text/javascript">
-//            var myChart = Highcharts.chart('statschart', {
-//                chart: {
-//                    type: 'area',
-//                    spacingBottom: 30
-//                },
-//                title: {
-//                    text: ''
-//                },
-//                xAxis: {
-//                    categories: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'],
-//                    gridLineColor: '#197F07',
-//                    gridLineWidth: 1,
-//                    gridLineDashStyle: 'dot'
-//                },
-//                yAxis: {
-//                    gridLineColor: '#197F07',
-//                    gridLineWidth: 1,
-//                    gridLineDashStyle: 'dot'
-//                },
-//                tooltip: {
-//                    formatter: function () {
-//                        return '<b>' + this.series.name + '</b><br/>' +
-//                            this.x + ': ' + this.y;
-//                    }
-//                },
-//                credits: {
-//                    enabled: false
-//                },
-//                series: [{
-//                    name: 'Server',
-//                    data: [50, 30, 20, 40, 58, 55, 40]
-//                }]
-//            });
-        </script>
-        <script type="text/javascript">
-        window.onload = function () {
-            
-            var chart = new CanvasJS.Chart("chartContainer",{
-                title: {
-                text: ""
-                },
-                axisX:{
-                    gridThickness: 1,
-                    gridDashType: "dot",
-                    gridColor: "#e2703c",
-                    lineColor: "#2d3957",
-                    tickColor: "#E1E1E1",
-                    tickLength: 10,
-                    tickThickness: 1
-                },
-                toolTip: {
-                    fontColor: "#e2703c"
-                },
-                axisY:{
-                    lineColor: "#FFFFFF",
-                    gridThickness: 1,
-                    gridDashType: "dot",
-                    gridColor: "#e2703c",
-                    tickLength: 5,
-                    tickColor: "white",
-                    tickThickness: 5,
-                    interval: 20
-                },
-                data: [{
-                    type: "area",
-                    markerBorderColor : "#e2703c",
-                    markerBorderThickness: 3,
-                    lineColor: "#e2703c",
-                    color: "rgba(251, 240, 228, 0.5)",
-                    markerColor: "#ffffff",
-                    dataPoints: [//array
-                        { y: 55, label: "Senin" },
-                        { y: 35, label: "Selasa" },
-                        { y: 20, label: "Rabu" },
-                        { y: 40, label: "Kamis" },
-                        { y: 57, label: "Jum'at" },
-                        { y: 54, label: "Sabtu" },
-                        { y: 40, label: "Minggu" }
-                    ]
-                }]
-            });
+            window.onload = function () {
 
-            chart.render();
-    }
+                var chart = new CanvasJS.Chart("chartContainer",{
+                    title: {
+                    text: ""
+                    },
+                    axisX:{
+                        gridThickness: 1,
+                        gridDashType: "dot",
+                        gridColor: "#e2703c",
+                        lineColor: "#2d3957",
+                        tickColor: "#E1E1E1",
+                        tickLength: 10,
+                        tickThickness: 1
+                    },
+                    toolTip: {
+                        fontColor: "#e2703c"
+                    },
+                    axisY:{
+                        lineColor: "#FFFFFF",
+                        gridThickness: 1,
+                        gridDashType: "dot",
+                        gridColor: "#e2703c",
+                        tickLength: 5,
+                        tickColor: "white",
+                        tickThickness: 5,
+                        interval: 20
+                    },
+                    data: [{
+                        type: "area",
+                        markerBorderColor : "#e2703c",
+                        markerBorderThickness: 3,
+                        lineColor: "#e2703c",
+                        color: "rgba(251, 240, 228, 0.5)",
+                        markerColor: "#ffffff",
+                        dataPoints: [//array
+                            { y: 55, label: "Senin" },
+                            { y: 35, label: "Selasa" },
+                            { y: 20, label: "Rabu" },
+                            { y: 40, label: "Kamis" },
+                            { y: 57, label: "Jum'at" },
+                            { y: 54, label: "Sabtu" },
+                            { y: 40, label: "Minggu" }
+                        ]
+                    }]
+                });
+
+                chart.render();
+        }
     </script>
     <script src="plugins/canvas/canvasjs.min.js"></script>
     
