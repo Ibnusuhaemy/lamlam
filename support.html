@@ -67,10 +67,62 @@
                     <div class="col-sm-6 col-md-7 faq-list">
                         <h1>FAQ</h1>
                         <ul>
-                            <li class="faq-question"><a href="#">Bagaimana cara membuat akun di LAMLAM?</a></li>
-                            <li class="faq-question"><a href="#">Bagaimana cara login di LAMLAM?</a></li>
-                            <li class="faq-question"><a href="#">Bagaimana cara membeli theme di LAMLAM?</a></li>
-                            <li class="faq-question"><a href="#">Apa fungsi voucher di LAMLAM?</a></li>
+                            <li class="panel-group faq-question" role="tablist" id="faq1"> 
+                                <div class="panel panel-default"> 
+                                    <div class="panel-heading" role="tab" id="collapseListGroupHeading1"> 
+                                        <h4 class="panel-title"> 
+                                            <a href="#collapseListGroup1" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseListGroup1" data-item="1"> Bagaimana cara membuat akun di LAMLAM? </a> 
+                                        </h4> 
+                                    </div> 
+                                    <div class="panel-collapse collapse" role="tabpanel" id="collapseListGroup1" aria-labelledby="collapseListGroupHeading1" aria-expanded="false"> 
+                                        <ul class="list-group"> 
+                                            <li class="list-group-item">Bootply</li> 
+                                        </ul> 
+                                    </div> 
+                                </div> 
+                            </li>
+                            <li class="panel-group faq-question" role="tablist" id="faq2"> 
+                                <div class="panel panel-default"> 
+                                    <div class="panel-heading" role="tab" id="collapseListGroupHeading2"> 
+                                        <h4 class="panel-title"> 
+                                            <a href="#collapseListGroup2" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseListGroup1" data-item="2"> Bagaimana cara login di LAMLAM? </a> 
+                                        </h4> 
+                                    </div> 
+                                    <div class="panel-collapse collapse" role="tabpanel" id="collapseListGroup2" aria-labelledby="collapseListGroupHeading2" aria-expanded="false"> 
+                                        <ul class="list-group"> 
+                                            <li class="list-group-item">Bootply</li> 
+                                        </ul> 
+                                    </div> 
+                                </div> 
+                            </li>
+                            <li class="panel-group faq-question" role="tablist" id="faq3"> 
+                                <div class="panel panel-default"> 
+                                    <div class="panel-heading" role="tab" id="collapseListGroupHeading3"> 
+                                        <h4 class="panel-title"> 
+                                            <a href="#collapseListGroup3" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseListGroup1" data-item="3"> Bagaimana cara membeli theme di LAMLAM? </a> 
+                                        </h4> 
+                                    </div> 
+                                    <div class="panel-collapse collapse" role="tabpanel" id="collapseListGroup3" aria-labelledby="collapseListGroupHeading3" aria-expanded="false"> 
+                                        <ul class="list-group"> 
+                                            <li class="list-group-item">Bootply</li> 
+                                        </ul> 
+                                    </div> 
+                                </div> 
+                            </li>
+                            <li class="panel-group faq-question" role="tablist" id="faq4"> 
+                                <div class="panel panel-default"> 
+                                    <div class="panel-heading" role="tab" id="collapseListGroupHeading4"> 
+                                        <h4 class="panel-title"> 
+                                            <a href="#collapseListGroup4" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseListGroup1" data-item="4"> Apa fungsi voucher di LAMLAM? </a> 
+                                        </h4> 
+                                    </div> 
+                                    <div class="panel-collapse collapse" role="tabpanel" id="collapseListGroup4" aria-labelledby="collapseListGroupHeading4" aria-expanded="false"> 
+                                        <ul class="list-group"> 
+                                            <li class="list-group-item">Bootply</li> 
+                                        </ul> 
+                                    </div> 
+                                </div> 
+                            </li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-5 faq-form">
@@ -215,61 +267,15 @@
                 });
             });
         </script>
-        
-        <!-- Custom Map -->
-<!--
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
         <script type="text/javascript">
-            $(function () {
-
-                function initMap() {
-
-                    var location = new google.maps.LatLng(50.0875726, 14.4189987);
-
-                    var mapCanvas = document.getElementById('map');
-                    var mapOptions = {
-                        center: location,
-                        zoom: 16,
-                        panControl: false,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                    }
-                    
-                    var map = new google.maps.Map(mapCanvas, mapOptions);
-                    
-                    var markerImage = 'images/icons/marker.png';
-
-                    var marker = new google.maps.Marker({
-                        position: location,
-                        map: map,
-                        icon: markerImage
-                    });
-
-                    var contentString = '<div class="info-window">' +
-                            '<h3>Info Window Content</h3>' +
-                            '<div class="info-content">' +
-                            '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
-                            '</div>' +
-                            '</div>';
-
-                    var infowindow = new google.maps.InfoWindow({
-                        content: contentString,
-                        maxWidth: 400
-                    });
-
-                    marker.addListener('click', function () {
-                        infowindow.open(map, marker);
-                    });
-                    
-                    var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
-
-                    map.set('styles', styles);
-                    
-                }
-
-                google.maps.event.addDomListener(window, 'load', initMap);
+            $('.faq-question a').click(function(){
+                var dataItem = parseInt($(this).attr("data-item"));
+                var setItem = '#faq'+dataItem+'';
+                
+                $(setItem).toggleClass('open');
+                
             });
         </script>
--->
         
     </body>
 </html>

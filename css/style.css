@@ -946,6 +946,24 @@ p{
 .faq-list h1{
     margin-bottom: 20px;
 }
+.faq-list ul .panel-group{
+    margin-bottom: 0;
+}
+.faq-list ul .panel{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+}
+.faq-list .panel-default > .panel-heading{
+    background-color: #f6f6f6;
+    border-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+.faq-list .panel-group .panel-heading + .panel-collapse > .list-group{
+    border-top: none;
+}
 .faq-list ul .faq-question{
     position: relative;
     padding: 20px 0 20px 40px;
@@ -973,6 +991,27 @@ p{
     left: 0;
     right: auto;
     bottom: 0;
+    height: 73px;
+}
+.faq-list ul .faq-question:before,
+.faq-list ul .faq-question.close:before{
+    transform: rotate(0deg);
+    transition: transform 0.5s linear;
+} 
+.faq-list ul .faq-question.open:before{
+    transform: rotate(90deg);
+    transition: transform 0.5s linear;
+}
+.faq-list .list-group-item{
+    font-family: 'Roboto Light', Fallback, sans-serif;
+    background-color: #f6f6f6;
+    border: none;
+}
+.faq-list .panel > .panel-collapse > .list-group .list-group-item,
+.panel > .panel-collapse > .list-group:last-child .list-group-item:last-child{
+    border-bottom: 1px dashed #a9a9a9;
+    margin-bottom: 0;
+    border-radius: 0;
 }
 .faq-form .panel{
     padding: 38px 42px;
@@ -1438,7 +1477,7 @@ call-support{
     
     /* --- Support --- */
     .faq-list ul .faq-question:before{
-        line-height: 105px;
+/*        line-height: 105px;*/
     }
     .faq-form .panel{
         padding: 20px 30px 30px;
