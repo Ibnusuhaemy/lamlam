@@ -433,6 +433,10 @@ p{
 .dashboard-sidebar .dashboard-logo{
     padding: 30px;
 }
+.dashboard-logo a:hover,
+.dashboard-logo a:focus{
+    text-decoration: none;
+}
 .dashboard-logo img{
     width: 155px;
     display: inline-block;
@@ -457,12 +461,23 @@ p{
     letter-spacing: -0.005em;
     padding: 0 30px;
     border-left: 5px solid transparent;
+    text-align: left;
+    position: relative;
 }
 .sidebar-menu .list-group-item .sidebar-icon{
     font-size: 17px;
     margin-right: 20px;
     position: relative;
     top: 3px;
+    right: auto;
+    transform: translateX(0);
+    transition: all .5s linear;
+}
+.dashboard-sidebar.active .sidebar-menu .list-group-item .sidebar-icon{
+    transform: translateX(200px);
+    transition: all .5s linear;
+    width: 24px;
+    height: 24px;
 }
 .sidebar-menu .list-group-item.active,
 .sidebar-menu .list-group-item.active:hover,
