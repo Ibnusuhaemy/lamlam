@@ -43,22 +43,57 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-                <div class="list-group sidebar-menu">
-                    <a href="index.html" class="list-group-item"><span class="sidebar-icon fa fa-home"></span> Dashboard</a>
-                    <a href="transaction.html" class="list-group-item"><span class="sidebar-icon fa fa-money"></span> Transaction</a>
-                    <a href="voucher.html" class="list-group-item"><span class="sidebar-icon fa fa-dollar"></span> Voucher</a>
-                    <a href="package.html" class="list-group-item"><span class="sidebar-icon fa fa-database"></span> Package</a>
-                    <a href="mysite.html" class="list-group-item"><span class="sidebar-icon fa fa-file-o"></span> Page Builder</a>
-                    <a href="domain.html" class="list-group-item"><span class="sidebar-icon fa fa-shield"></span> Domain</a>
-                    <a href="price.html" class="list-group-item"><span class="sidebar-icon fa fa-dollar"></span> Domain Price</a>
-                    <a href="log.html" class="list-group-item"><span class="sidebar-icon fa fa-history"></span> Log</a> 
-                    <a href="webmail.html" class="list-group-item"><span class="sidebar-icon fa fa-at"></span> WebMail</a>
-                    <a href="kontak.html" class="list-group-item"><span class="sidebar-icon fa fa-envelope"></span> Kontak</a>
-                    <a href="support.html" class="list-group-item"><span class="sidebar-icon fa fa-support"></span> Support</a>
-                    <a href="auth.html" class="list-group-item active"><span class="sidebar-icon fa fa-shield"></span> Auth</a>
-                    <hr class="stats-separator"></hr>
-                    <a href="pengaturan" class="list-group-item"><span class="sidebar-icon fa fa-cog"></span> Pengaturan</a>
-                </div>
+                 <ul class="list-group sidebar-menu">
+                    <li>
+                        <a href="index.html" class="list-group-item"><span class="sidebar-icon fa fa-tachometer"></span> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="transaction.html" class="list-group-item"><span class="sidebar-icon fa fa-handshake-o"></span> Transaction</a>
+                    </li>
+                    <li>
+                        <a href="voucher.html" class="list-group-item"><span class="sidebar-icon fa fa-credit-card"></span> Voucher</a>
+                    </li>
+                    <li>
+                        <a href="package.html" class="list-group-item"><span class="sidebar-icon fa fa-database"></span> Package</a>
+                    </li>
+                    <li>
+                        <a href="mysite.html" class="list-group-item"><span class="sidebar-icon fa fa-file-o"></span> Page Builder</a>
+                    </li>
+                    <li>
+                        <a href="domain.html" class="list-group-item"><span class="sidebar-icon fa fa-globe"></span> Domain</a>
+                    </li>
+                    <li>
+                        <a href="price.html" class="list-group-item"><span class="sidebar-icon glyphicon glyphicon-usd"></span> Domain Price</a>
+                    </li>
+                    <li>
+                        <a href="log.html" class="list-group-item"><span class="sidebar-icon fa fa-history"></span> Log</a> 
+                    </li>
+                    <li>
+                        <a href="webmail.html" class="list-group-item"><span class="sidebar-icon fa fa-at"></span> WebMail</a>
+                    </li>
+                    <li>
+                        <a href="kontak.html" class="list-group-item"><span class="sidebar-icon fa fa-phone-square"></span> Kontak</a>
+                    </li>
+                    <li>
+                        <a href="support.html" class="list-group-item"><span class="sidebar-icon fa fa-support"></span> Support</a>
+                    </li>
+                    <li>
+                        <a href="#" class="list-group-item active"><span class="sidebar-icon fa fa-user-secret"></span> Auth</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="user.html" class="list-group-item"><span class="sidebar-icon fa fa-chevron-right"></span> User</a>
+                                <a href="group.html" class="list-group-item"><span class="sidebar-icon fa fa-chevron-right"></span> Groups</a>
+                                <a href="acces.html" class="list-group-item"><span class="sidebar-icon fa fa-chevron-right"></span> Access</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <hr class="stats-separator">
+                    </li>
+                    <li>
+                        <a href="pengaturan.html" class="list-group-item"><span class="sidebar-icon glyphicon glyphicon-cog"></span> Pengaturan</a>
+                    </li>
+                </ul>
             </div>
 
             <!-- Content -->
@@ -122,7 +157,7 @@
                         <div class="col-md-8 title-right">
                             <div class="form-inline dashboard-form form-mysite">
                                 <div class="form-group">
-                                    <a href="#" class="btn btn-dashboard btn-transparent">Add New Group</a>
+                                    <a href="group_new.html" class="btn btn-dashboard btn-transparent">Add New Group</a>
                                     <a href="#" class="btn btn-dashboard btn-transparent">Export</a>
                                 </div>
                             </div>
@@ -258,6 +293,17 @@
                     }
                 }
             });
+        </script>
+        
+        <!-- Sidebar Submenu -->
+        <script type="text/javascript">
+            
+            $('.sub-menu').hide();
+
+            $("li:has(ul)").click(function(){
+                $("ul",this).toggle('slow');
+            });
+
         </script>
 
 </body>
