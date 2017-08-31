@@ -157,7 +157,7 @@
                     </div>
                 </div>
 
-                <div class="dashboard-domain dashboard-newebmail">
+                <div class="dashboard-domain dashboard-editpf">
                     <div class="row">
                         <div class="col-xs-12">
                                 
@@ -197,17 +197,21 @@
                                         <p class="help-block">Select one or more groups.</p>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group form-upload">
                                     <label for="Email" class="col-sm-4 col-md-3 col-lg-3 control-label">Avatar <span class="text-red">*</span></label>
                                     <div class="col-sm-8 col-md-9 col-lg-9 fields">
-                                    	<div class="form-group">
-							                <input type="file" name="files[]" id="js-upload-files" multiple>
-							              </div>
+                                        <div class="form-preview">
+                                            <img id="preview" src="images/profile/andy-zain2.png" width="120" height="120" alt="User Profile">
+                                        </div>
+                                        <div class="fileupload btn btn-file">
+                                            <span>Ganti Avatar</span>
+                                            <input type="file" name="avatar" id="avatar" onchange="readURL(this);" class="btn-file">                                    
+                                        </div>
                                         <p class="help-block">Format file must PNG, JPEG.</p>
                                     </div>
                                 </div>
                                 <div class="form-group btn-form">
-                                    <div class="col-sm-offset-3 col-sm-9 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10 fields">
+                                    <div class="col-sm-offset-4 col-sm-8 col-md-offset-3 col-md-9 col-lg-offset-3 col-lg-9 fields">
                                         <input type="submit" name="domainbtn" id="domainbtn" value="Simpan" class="btn btn-transparent">
                                     </div>
                                 </div>
@@ -252,6 +256,31 @@
                     }
                 }
             });
+        </script>
+        
+        <!-- Sidebar Submenu -->
+        <script type="text/javascript">
+            
+            $('.sub-menu').hide();
+
+            $("li:has(ul)").click(function(){
+                $("ul",this).toggle('slow');
+            });
+
+        </script>
+        
+        <script type="text/javascript">
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#preview').attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
         </script>
         
         <!-- Chosen -->
