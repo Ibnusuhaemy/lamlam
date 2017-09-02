@@ -1481,7 +1481,6 @@ p{
 }
 
 
-
 /* --- New Domain --- */
 .dashboard-content .dashboard-domnew{
     width: 600px;
@@ -1575,6 +1574,43 @@ p{
 }
 .dashboard-accordion .dashboard-form .control-label{
     font-size: 14px;
+}
+
+/* --- Permission --- */
+.dashboard-content .dashboard-perm{
+    width: 100%;
+}
+.dashtab-content .check-content,
+.access-list .check-content{
+    font-family: 'Roboto Regular', Fallback, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+}
+.dashtab-content .form-control{
+    width: auto;
+    display: inline-block;
+}
+.dashtab-content .access-list{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    column-gap: 5px;
+    column-width: auto;
+    column-count: 4;
+}
+.access-list .access-title{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+.access-list li{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    word-wrap: normal;
 }
 
 /* --- Media Query --- */
@@ -1695,6 +1731,11 @@ p{
     }
     .dashboard-newebmail .choose-single{
         width: 100%;
+    }
+    
+    /* --- Permission --- */
+    #permission-list .access-list{
+        column-count: 3;
     }
     
 }
@@ -1964,6 +2005,9 @@ p{
     .dashboard-newebmail .input-group .form-control{
         padding-right: 5px;
     }
+    #permission-list .access-list{
+        column-count: 2;
+    }
     
 }
 @media screen and (max-width: 479px){
@@ -2040,6 +2084,10 @@ p{
     }
     .panel-site .btn{
         white-space: normal;
+    }
+    
+    .access-list{
+        column-count: 1;
     }
     
 }
