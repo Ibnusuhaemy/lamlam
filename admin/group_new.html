@@ -60,7 +60,7 @@
                         <a href="mysite.html" class="list-group-item"><span class="sidebar-icon fa fa-file-o"></span> Page Builder</a>
                     </li>
                     <li>
-                        <a href="domain.html" class="list-group-item active"><span class="sidebar-icon fa fa-globe"></span> Domain</a>
+                        <a href="domain.html" class="list-group-item"><span class="sidebar-icon fa fa-globe"></span> Domain</a>
                     </li>
                     <li>
                         <a href="price.html" class="list-group-item"><span class="sidebar-icon glyphicon glyphicon-usd"></span> Domain Price</a>
@@ -82,8 +82,8 @@
                         <ul class="sub-menu">
                             <li>
                                 <a href="user.html" class="list-group-item"><span class="sidebar-icon fa fa-chevron-right"></span> User</a>
-                                <a href="group.html" class="list-group-item"><span class="sidebar-icon fa fa-chevron-right"></span> Groups</a>
-                                <a href="acces.html" class="list-group-item"><span class="sidebar-icon fa fa-chevron-right"></span> Access</a>
+                                <a href="group.html" class="list-group-item active"><span class="sidebar-icon fa fa-chevron-right"></span> Groups</a>
+                                <a href="permission.html" class="list-group-item"><span class="sidebar-icon fa fa-chevron-right"></span> Access</a>
                             </li>
                         </ul>
                     </li>
@@ -163,15 +163,15 @@
                                 
                             <form class="form-horizontal dashboard-form">
                                 <div class="form-group">
-                                    <label for="username" class="col-sm-4 col-md-3 col-lg-3 control-label">Name <span class="text-red">*</span></label>
-                                    <div class="col-sm-8 col-md-9 col-lg-9 fields">
+                                    <label for="username" class="col-sm-4 col-md-3 col-lg-2 control-label">Name <span class="text-red">*</span></label>
+                                    <div class="col-sm-8 col-md-9 col-lg-10 fields">
                                         <input type="text" id="name" class="form-control pass-control" placeholder="Name" required>
                                         <p class="help-block">The name of group.</p>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Email" class="col-sm-4 col-md-3 col-lg-3 control-label">Definition <span class="text-red">*</span></label>
-                                    <div class="col-sm-8 col-md-9 col-lg-9 fields">
+                                    <label for="Email" class="col-sm-4 col-md-3 col-lg-2 control-label">Definition <span class="text-red">*</span></label>
+                                    <div class="col-sm-8 col-md-9 col-lg-10 fields">
                                         <input type="text" id="definition" class="form-control pass-control" placeholder="Definition" required>
                                         <p class="help-block">The definition of group.</p>
                                     </div>
@@ -222,6 +222,16 @@
                     }
                 }
             });
+        </script>
+        
+        <!-- Sidebar Submenu -->
+        <script type="text/javascript">
+            
+            $("li:has(ul)").click(function(){
+                $('.sub-menu').hide();
+                $("ul",this).toggle('slow');
+            });
+
         </script>
         
         <!-- Chosen -->
